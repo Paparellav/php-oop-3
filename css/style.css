@@ -27,12 +27,17 @@ h2 {
   justify-content: space-between;
 }
 
+.section_1 small {
+  padding: .7rem 0;
+}
+
 .section_2 ul {
   padding-left: 1rem;
 }
 
-.section_3 {
+.section_3, .section_4 {
   text-align: center;
+  margin: 1rem 0;
 }
 
 .section_3 h2 {

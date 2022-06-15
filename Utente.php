@@ -22,9 +22,8 @@ class User
   {
     if (get_parent_class($_product) === "Product") {
       $this->cart[] = $_product;
-      return true;
     } else {
-      return false;
+      throw new Exception("Stai aggiungendo al carrello qualcosa che non è un prodotto.");
     }
   }
 

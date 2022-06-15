@@ -1,0 +1,23 @@
+.title_0, .title_1 {
+  padding: 1rem;
+}
+
+.title_0 {
+  font-weight: 400;
+  margin-bottom: -1.5rem;
+  color: rgb(217, 51, 22);
+}
+
+.title_1 {
+  font-weight: lighter;
+  color: white;
+}
+
+body {
+  background-image: url("http://www.ildolceamico.it/img/Wallpaper/dogs/dogs%2002.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

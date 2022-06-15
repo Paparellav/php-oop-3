@@ -4,6 +4,8 @@ require_once __DIR__ . "/Toy.php";
 require_once __DIR__ . "/Accessory.php";
 require_once __DIR__ . "/Utente.php";
 
+// Prodotti
+
 $pet_food = new Food("PetFood", "Mangime di alta qualità per gli animali", 3.99, "20/02/2023");
 $pet_toy = new Toy("Trixie", "Corda da masticare e tirare per cani", 5.99, 1250);
 $pet_accessory = new Accessory("Localizzatore GPS", "Collare con CHIP di geolocalizzazione per cani", 49.99, "Huawei");
@@ -12,9 +14,13 @@ $pet_accessory2 = new Accessory("Targhetta", "Targhetta con incisione nome cane"
 // Utente
 
 $Vitantonio = new User("Vitantonio", "vitopap@gmail.com", 121545459865, true, true);
-$Vitantonio->addToCart($pet_accessory);
-$Vitantonio->addToCart($pet_food);
-$Vitantonio->addToCart($pet_food);
+try {
+  // $Vitantonio->addToCart($pet_accessory);
+  // $Vitantonio->addToCart($pet_toy);
+  $Vitantonio->addToCart("ciao");
+} catch (Exception $e) {
+  echo "Attenzione!! " . $e->getMessage();
+}
 
 ?>
 
@@ -69,7 +75,11 @@ $Vitantonio->addToCart($pet_food);
         <h2>Totale: € <?php echo $Vitantonio->getTotalPrice(); ?></h2>
         <h3>
           <?php echo $Vitantonio->checkCDC(); ?>
-        </h3>
+        </h3>  
+      </section>
+      <section class="section_4">
+        <h2>Sede legale:</h2>
+        <a href="indexAdress.php">Clicca qui</a>
       </section>
     </div>
   </main>
